@@ -1,4 +1,5 @@
 body{
+  margin: auto 0;
   background-color: #EBEDEF;
 }
 
@@ -7,12 +8,78 @@ body{
   align-items: center;
 }
 
+button {
+  height: 25px;
+  position: relative;
+  top: 80px;
+  margin-right: 40%;
+  margin-left: 40%;
+
+}
+
+
+.zone {
+    cursor:pointer;
+    color:#699;
+    font-size:2em;
+    border-radius:4px;
+    border:1px solid #bbb;
+    transition: all 0.3s linear;
+}
+
+.zone:hover {
+    -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+
+/* NAV */
+
+
+.main-nav{
+    display: flex;
+    list-style: none;
+    font-size: 0.9em;
+    margin: 0;
+}
+
+@media only screen and (max-width: 600px){
+    .main-nav{
+        font-size: 0.5em;
+        padding: 0;
+    }
+}
+
+.push {
+    margin-left: auto;
+}
+
+li{
+    padding: 20px;
+}
+
+a{
+    color: #699;
+    text-decoration: none;
+}
+
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
 h1{
   text-align: center;
   font-family: cursive;
+  position: relative;
+  top: 80px;
 }
 
 p{
+  position: relative;
+  top: 60px;
   text-align: center;
   font-family: sans-serif;
 }
@@ -24,17 +91,12 @@ p{
    margin-left: 35%;
    text-align: center;
    height: 25px;
+   position: relative;
+    top: 60px;
 }
 
-button {
-   height: 25px;
-  position: relative;
-  top: 5px;
-  margin-right: 40%;
-  margin-left: 40%;
- 
 
-}
+
 
 
 .done {
@@ -45,22 +107,17 @@ ul li.checked {
   text-decoration: line-through;
 }
 
-ul li:nth-child(odd) {
-  background: #F0B27A;
+#ul li:nth-child(odd) {
+  background: #AEEEEE;
 }
 
-ul li:nth-child(even) {
-  background: #D4E6F1;
+#ul li:nth-child(even) {
+  background: #C0D9D9;
 }
 
 /* Darker background-color on hover */
-ul li:hover {
+#ul li:hover {
   background: #ddd;
-}
-
-ul{
-   position: relative;
-  top: 45px;
 }
 
 /* Style the close button */
@@ -81,7 +138,16 @@ ul{
   box-sizing: border-box;
 }
 
-ul li {
+#ul{
+   margin:0;
+  position: relative;
+  top: 80px;
+}
+
+#ul li {
+  margin:0;
+  position: relative;
+  top: 60px;
   cursor: pointer;
   position: relative;
   padding: 12px 8px 12px 40px;
@@ -97,8 +163,36 @@ ul li {
   user-select: none;
 }
 
+
 /* Remove margins and padding from the list */
 ul {
   margin: 0;
   padding: 0;
+}
+
+
+/***********************************************************************
+ *  Blue Background
+ **********************************************************************/
+.blue{
+    background: #7abcff; /* Old browsers */
+    background: -moz-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abcff), color-stop(44%,#60abf8), color-stop(100%,#4096ee)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* IE10+ */
+    background: linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C */
+}
+
+/***********************************************************************
+ *  Yellow Background
+ **********************************************************************/
+.blues{
+    background: #E0EEEE; /* Old browsers */
+    background: -moz-linear-gradient(top, #E0EEEE 0%, #E0EEEE 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#D1EEEE), color-stop(100%,#febf04)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #E0EEEE 0%,#D1EEEE 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #E0EEEE 0%,#D1EEEE 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #E0EEEE 0%,#D1EEEE 100%); /* IE10+ */
+    background: linear-gradient(top, #E0EEEE 0%,#D1EEEE 100%); /* W3C */
 }

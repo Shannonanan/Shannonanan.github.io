@@ -1,8 +1,8 @@
 var button = document.getElementById("enter");
 var input = document.getElementById("userinput");
-var ul = document.querySelector("ul");
-var list = document.querySelector("ul");
-var myNodelist = document.getElementsByTagName("LI");
+var ul = document.getElementById("ul");
+var list = document.getElementById("ul");
+var myNodelist = document.getElementById("add");
 
 function inputLength() {
 	return input.value.length;
@@ -13,7 +13,7 @@ function createNewListElement() {
 	li.appendChild(document.createTextNode(input.value));
 	ul.appendChild(li);
 	input.value = "";
-	var newItemIndex = document.querySelector("ul").lastChild;
+	var newItemIndex = document.getElementById("ul").lastChild;
 	createCloseButtonForNewItem(newItemIndex);
 }
 
@@ -38,6 +38,7 @@ function removeListItemWhenClicked(){
 }
 
 function addListAfterClick() {
+	console.log("hello");
 	if (inputLength() > 0) {
 		createNewListElement();
 	}
@@ -62,15 +63,6 @@ function createCloseButton(i){
   span.appendChild(txt);
   myNodelist[i].appendChild(span);
 }
-
-var i;
-for (var i = 0; i < myNodelist.length; i++) {
-  createCloseButton(i);
-removeListItemWhenClicked();
-}
-
-
-// Click on a close button to hide the current list item
 
 
 button.addEventListener("click", addListAfterClick);
